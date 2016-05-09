@@ -1,3 +1,11 @@
+
+Installation/Usage instructions
+```sh
+$ npm install # install dependencies
+$ npm start  # run this to start web application
+$ npm test  # run this to run tests
+```
+
 # Static Content challenge
 
 **NB: Please do not fork this repository, to avoid your solution being visible from this repository's GitHub page. Please clone this repository and submit your solution as a separate repository.**
