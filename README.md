@@ -1,12 +1,24 @@
+# Static Content challenge
 
-Installation/Usage instructions
+### Installation/Usage instructions
 ```sh
 $ npm install # install dependencies
-$ npm start  # run this to start web application
-$ npm test  # run this to run tests
+$ npm start  # run to start web application
+$ npm test  # run to execute tests
 ```
 
-# Static Content challenge
+### Solution approach
+
+Application is created using node.js and express using essential dependencies only for simplicity. Chai and mocha are used for testing, together with chai-http for request and response codes.
+
+The solution makes use of express dynamic routing, and node.js file loading to combine the template with the markdown files. Invalid routes are determined through errors on file load.
+
+Original template.html file has been renamed to views/template.ejs file. There is one line of code changed on loading the content to make use of ejs view engine.
+
+An npm package called marked is used to parse the markdown file into html tags displayed as content on the page.
+
+
+# Original instructions
 
 **NB: Please do not fork this repository, to avoid your solution being visible from this repository's GitHub page. Please clone this repository and submit your solution as a separate repository.**
 
