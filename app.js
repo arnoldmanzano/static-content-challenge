@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var fs = require('fs');
+var marked = require('marked');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -12,7 +13,8 @@ app.get('/:id', function(req, res) {
       res.status(404).send('Page not found');
     }
     else {
-      res.render('template', {content: data});
+      var dataParsed = marked(data);
+      res.render('template', {content: dataParsed});
     }
   });
 });
