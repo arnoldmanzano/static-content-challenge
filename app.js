@@ -8,8 +8,13 @@ app.set('view engine', 'ejs');
 
 app.get('/:id', function(req, res) {
   fs.readFile('content/' + req.params.id + '/index.md', 'utf8', function (err,data) {
+    if (err) {
+      res.status(404).send('Page not found');
+    }
+    else {
       res.render('template', {content: data});
-    });
+    }
+  });
 });
 
 app.listen(8000);
